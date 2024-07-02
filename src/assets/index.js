@@ -11,6 +11,15 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import tensorflow from "./tech/tensorflow.png";
+import iot from "./IoT.png";
+import medoc from "./medoc.png";
+import sciroit from "./sciroit.png";
+import kpmg from "./kpmg.png";
+import deepLearning from "./deep learning.png";
+import computervision from "./Computer Vision.png";
+import nlp from "./nlp.png";
+import robot from "./robot.png";
+import Artificial from "./ai.png";
 
 import css from "./tech/css.png";
 import yolo from "./tech/yolo.png";
@@ -42,6 +51,15 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  iot,
+  medoc,
+  sciroit,
+  kpmg,
+  deepLearning,
+  computervision,
+  nlp,
+  robot,
+  Artificial,
   logo,
   backend,
   chatbot,
