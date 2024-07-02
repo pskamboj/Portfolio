@@ -1,4 +1,13 @@
 import {
+    iot,
+    medoc,
+    sciroit,
+    kpmg,
+    deepLearning,
+    computervision,
+    nlp,
+    robot,
+    Artificial,
     mobile,
     backend,
     python,
@@ -57,19 +66,19 @@ import {
     },
     {
       title: "Deep Learning Developer",
-      icon: "src/assets/deep learning.png",
+      icon: deepLearning,
     },
     {
       title: "IoT engineer",
-      icon: "src/assets/IoT.png",
+      icon: iot,
     },
     {
       title: "Computer Vision Developer",
-      icon: "src/assets/Computer Vision.png",
+      icon: computervision,
     },
     {
       title: "Natural Language Processing",
-      icon: "src/assets/nlp.png",
+      icon: nlp,
     },
     {
       title: "React Developer",
@@ -77,11 +86,11 @@ import {
     },
     {
       title: "Robotics",
-      icon: "src/assets/robot.png",
+      icon: robot,
     },
     {
       title: "AI Developer",
-      icon: "src/assets/ai.png",
+      icon: Artificial,
     },
 
   ];
@@ -149,7 +158,7 @@ import {
     {
       title: "Software Development Intern",
       company_name: "MEDOC",
-      icon: "src/assets/medoc.png",
+      icon: medoc,
       iconBg: "#383E56",
       date: "January 2023 - June 2023",
       points: [
@@ -162,7 +171,7 @@ import {
     {
       title: "Developent Intern",
       company_name: "SCIROIT Technologies",
-      icon: "src/assets/sciroit.png",
+      icon: sciroit,
       iconBg: "#E6DEDD",
       date: "March 2024 - Present",
       points: [
@@ -196,7 +205,7 @@ import {
     {
       title: "Data Analytics Intern",
       company_name: "KPMG",
-      icon: "src/assets/kpmg.png",
+      icon: kpmg,
       iconBg: "#383E56",
       date: "June 2023 - August 2023",
       points: [
