@@ -1,25 +1,22 @@
-import React,{useEffect,useState} from 'react'
-import {Link} from 'react-router-dom';
-
-import {styles} from '../styles';
-import {navLinks} from '../constants';
-import {logo,menu,close} from '../assets';
-
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { styles } from '../styles';
+import { navLinks } from '../constants';
+import { logo, menu, close } from '../assets';
+import resume from '../assets/Prabhjot_singh_resume.pdf'; // Ensure you have your resume file here
 
 const Navbar = () => {
-  const[active,setActive] = useState('');
-  const[toggle,setToggle] = useState(false);
+  const [active, setActive] = useState('');
+  const [toggle, setToggle] = useState(false);
 
   return (
-    <nav
-    className={'${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary'}
-    >
+    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
           className='flex items-center gap-2'
           onClick={() => {
-            setActive("");
+            setActive('');
             window.scrollTo(0, 0);
           }}
         >
@@ -34,14 +31,18 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`${active === nav.title ? 'text-white' : 'text-secondary'} hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          {/* Add the Resume Download Button */}
+          <li className='text-[18px] font-medium cursor-pointer'>
+            <a href={resume} download="Prabhjot_Resume.pdf" className='text-secondary hover:text-white'>
+              Download Resume
+            </a>
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -53,17 +54,13 @@ const Navbar = () => {
           />
 
           <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? 'text-white' : 'text-secondary'}`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
@@ -72,11 +69,16 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              {/* Add the Resume Download Button for mobile view */}
+              <li className='font-poppins font-medium cursor-pointer text-[16px] text-secondary'>
+                <a href={resume} download="Prabhjot_Resume.pdf" onClick={() => setToggle(!toggle)}>
+                  Download Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-
     </nav>
   );
 };
